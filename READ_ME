@@ -1,0 +1,12 @@
+Plagiarism Catcher
+
+This is a program designed to search through a set of text documents and determine which documents were likely plagiarized. It uses a hash function to sort through all the words. Hash collisions are used to detect cheating; more collisions between documents means a higher chance of plagiarism.
+
+User instructions
+1) After unzipping the given zip file, type "make" into the command line to compile the code. There should only be one .cpp file (the main file).
+2) Check to see if the compilation worked by typing "ls" into the command line. There should be a file called "plagiarismCatcher".
+3) Now type "./plagiarismCatcher filePath chunkSize threshold" to run the program.
+	-replace filePath with the name of the folder that holds the documents. NOTE: the folder containing all the documents should be in the same location as the program.
+	-replace chunkSize with the desired chunk size. A chunk is a fixed number of words that will be passed into the hash function and checked for collisions.
+	-replace threshold with the minimum number of collisions to be considered plagiarism. The program will only print out the file pairs that have more collisions than the threshold.
+4) The output will be formated: "numberOfCollisions: file1, file2".
